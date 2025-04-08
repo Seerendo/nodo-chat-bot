@@ -1,0 +1,16 @@
+** Servicios: **
+
+*** HotSpot Nodo: ***
+
+El HotSpot Nodo garantica la calidad y seguridad de las redes inalámbricas a través de la gestión centralizada de usuarios y puntos de acceso WIFI personalizados.
+
+Las Características que el sistema ofrece son:
+
+- Personaliza la página del navegador del cliente para ajustarse al diseño de su empresa con plantillas que incluyen su logotipo y colores.
+- Emite publicidad para impulsar la marca y servicios de su empresa.
+- Acceso a la red WIFI con contraseña personal por usuario (cédula de identidad, pasaporte, redes sociales).
+- Número de usuarios concurrentes, define un número específico de dispositivos terminales que pueden conectarse a la red.
+- Crea diferentes niveles de cuentas(para clientes, personal, visitantes, etc).
+- Habilita temporalmente la contraseña de acceso a la red acorde el tiempo de visita de su cliente.
+- Controla el ancho de banda para configurar la velocidad de carga y descarga por cuenta del usuario, mejorando la calidad del servicio de internet.
+- Envía una encuesta de satisfacción a todos los clientes que se conectan a la WiFi.

@@ -1,11 +1,11 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uvicorn
-from ollama_chatbot import get_chain
+from ollama_chatbot import chain
+from ollama_rag_chatbot import rag_chain
 from business_info import info
 
 app = FastAPI(title="API del Chatbot RAG")
-chain = get_chain()
 
 context_store = {}
 

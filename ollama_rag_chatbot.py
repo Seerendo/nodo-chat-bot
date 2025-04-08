@@ -5,15 +5,14 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from sentence_transformers import SentenceTransformer
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
-from langchain.chains import ConversationalRetrievalChain
-from langchain.memory import ConversationBufferMemory
+from langchain.chains import RetrievalQA
 import os
 
 # ======= CONFIGURACIÓN GENERAL =======
 DOCS_DIR = "corpus" # DIRECTORIO LOCAL DONDE ESTÁN TUS DOCUMENTOS DE TEXTO
 EMBED_MODEL = "all-MiniLM-L6-v2" # MODELO DE EMBEDDINGS
 EMBED_MODEL_PATH = "models/all-MiniLM-L6-v2" # MODELO DE EMBEDDINGS LOCAL
-LLM_OLLAMA_MODEL = "gemma2:2b" # MODELO EN OLLAMA
+LLM_OLLAMA_MODEL = "gemma2:9b" # MODELO EN OLLAMA
 CHUNK_SIZE = 300 # TAMAÑO DE LOS "CHUNKS" (fragmentos de texto) EN CARACTERES
 CHUNK_OVERLAP = 30 # CANTIDAD DE CARACTERES DE SOLAPAMIENTO ENTRE CHUNKS
 
@@ -39,7 +38,7 @@ def load_documents(DOCS_DIR):
             print(f"Error al cargar {filename}: {e}")
     return documents
 
-def initialize_rag_chain():
+def get_rag_chain():
     documents = load_documents(DOCS_DIR)
 
     # ======= CREACIÓN DE VECTORSTORE (FAISS) Y EMBEDDINGS =======
@@ -65,9 +64,6 @@ def initialize_rag_chain():
     Here is the context of the conversation:
     {context}
 
-    Here is the conversation history:                            
-    {chat_history}
-
     The user has asked the following question:
     {question}
 
@@ -75,29 +71,29 @@ def initialize_rag_chain():
 
     """)
 
-    # ======= CONFIGURACIÓN DE MEMORIA =======
-    memory = ConversationBufferMemory(
-        memory_key="chat_history",
-        return_messages=True,
-        output_key='answer'
-    )
-
     # ======= CARGA DEL MODELO OLLAMA (LLM) =======
     llm = OllamaLLM(model=LLM_OLLAMA_MODEL)
 
     # ======= CADENA RAG (RETRIEVAL QA) =======
     retriever = vectorstore.as_retriever(search_kwargs={"k": min(len(documents), 3)})
-
-    chain = ConversationalRetrievalChain.from_llm(
+    chain = RetrievalQA.from_chain_type(
         llm=llm,
         retriever=retriever,
-        memory=memory,
         chain_type="stuff",
-        combine_docs_chain_kwargs={"prompt": prompt},
-        get_chat_history=lambda h: h,
-        verbose=False
+        chain_type_kwargs={"prompt": prompt}
     )
 
     return chain
 
-rag_chain = initialize_rag_chain()
+rag_chain = get_rag_chain()
+
+def chat():
+    while True:
+        user_input = input("User: ")
+        if user_input.lower() == "exit":
+            break
+        result = rag_chain.invoke({"query": user_input})
+        print("Bot: " + result["result"])
+
+if __name__ == "__main__":
+    chat()
