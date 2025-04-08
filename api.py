@@ -1,0 +1,33 @@
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import uvicorn
+from ollama_chatbot import get_chain
+from business_info import info
+
+app = FastAPI(title="API del Chatbot RAG")
+chain = get_chain()
+
+context_store = {}
+
+# Modelo para la solicitud
+class ChatRequest(BaseModel):
+    user_id: str
+    question: str
+
+@app.post("/chat")
+def ask_question(data: ChatRequest):
+    try:
+        user_context = context_store.get(data.user_id, "")
+        result = chain.invoke({
+            "business_info": info,
+            "context": user_context,
+            "question": data.question
+        })
+        new_context = user_context + f"User: {data.question}\nBot: {result}\n"
+        context_store[data.user_id] = new_context
+        return {"response": result}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)

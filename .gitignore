@@ -1,0 +1,5 @@
+models
+nodo-chat-bot
+corpus
+__pycache__
+vectorstore
