@@ -1,15 +1,15 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 import uvicorn
-from ollama_chatbot import chain
-from ollama_rag_chatbot import rag_chain
+import json
+from bots.ollama_chatbot import chain
+from bots.ollama_rag_chatbot import rag_chain
 from business_info import info
 
 app = FastAPI(title="API del Chatbot RAG")
 
 context_store = {}
 
-# Modelo para la solicitud
 class ChatRequest(BaseModel):
     user_id: str
     question: str
@@ -23,9 +23,10 @@ def ask_question(data: ChatRequest):
             "context": user_context,
             "question": data.question
         })
-        new_context = user_context + f"User: {data.question}\nBot: {result}\n"
+        json_response = json.loads(result)
+        new_context = user_context + f"User: {data.question}\nBot: {json_response["answer"]}\n"
         context_store[data.user_id] = new_context
-        return {"response": result}
+        return {"response": json_response["answer"]}
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error: {str(e)}")
 
