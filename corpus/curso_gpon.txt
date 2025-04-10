@@ -1,0 +1,31 @@
+=== CURSO DE GPON ===
+
+### ¿Qué voy a aprender? Curso de GPON ###
+
+- Módulo 1: Conceptos básicos sobre fibra óptica.
+- Módulo 2: Parámetros y características de la fibra óptica enmarcados en las redes PON.
+- Módulo 3: Consideraciones básicas al diseñar redes PON.
+- Módulo 4: Principales elementos de una red PON.
+- Módulo 5: Criterios de ingeniería para el diseño de una red PON.
+
+### Prácticas del Curso de GPON ###
+
+- Práctica 1: Elementos Pasivos de la red PON.
+- Práctica 2: Instalación de Fibra Óptica.
+- Práctica 3: Armado de cajas.
+- Práctica 4: Prueba reflectométricas.
+- Práctica 5: Taller final.
+
+### Incluye Curso de GPON ###
+
+- Clases Online y Presenciales.
+- Certificado de aprobación.
+- Metologías.
+
+### Página Inscripción del Curso de GPON ###
+
+https://academia.nodo.com.ec/inscripciones/redesgpon
+
+### Más Información del Curso de GPON ###
+
+https://academia.nodo.com.ec/redesgpon

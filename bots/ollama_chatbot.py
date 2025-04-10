@@ -16,10 +16,7 @@ Here is context of the conversation:
 
 Question: {question}
 
-Return a JSON object with:
-- "answer": (only answer questions that relate to the company context)
-- "contact_intent": true or false (true if the user wants to contact someone)
-- "contact_name": the name of the person to contact if available (else null)
+Answer: (Only answer questions that relate to the company context)
 
 """
 

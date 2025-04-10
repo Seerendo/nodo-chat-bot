@@ -1,0 +1,29 @@
+=== CURSO DE MIKROTIK ===
+
+### ¿Qué voy a aprender? Curso de Mikrotik ###
+
+- Módulo 1: Introducción Mikrotik.
+- Módulo 2: Ruteo.
+- Módulo 3: Bridging.
+- Módulo 4: Wireless.
+- Módulo 5: Administración de Red.
+- Módulo 6: Firewall.
+- Módulo 7: Qos.
+- Módulo 8: Túneles.
+
+### Incluye Curso de Mikrotik ###
+
+- Clases Online.
+- Certificado de aprobación.
+- Metologías.
+- Material didáctico digital.
+- Tendrá a disposición un equipo de Mikrotik para realizar prácticas.
+
+### Página Inscripción del Curso de Mikrotik ###
+
+https://academia.nodo.com.ec/inscripciones/mikrotik
+
+### Más Información del Curso de Mikrotik ###
+
+https://academia.nodo.com.ec/mikrotik
+

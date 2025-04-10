@@ -1,33 +1,19 @@
 info = """
-** Nombre de la empresa: **
-NODO Cía. Ltda
+** ¿Aceptas los términos y condiciones de uso?: **
 
-** Web de la empresa: **
-https://nodo.com.ec/home
+*** En caso de NO aceptar: ***
 
-** Misión: **
-La misión de NODO Cía. Ltda es brindar un servicio integral con un adecuado asesoramiento técnico a entera satisfacción del cliente.
+Gracias por utilizar nuestros servicios.
 
-** Visión: **
-La visión de NODO Cía. Ltda es convertirse en una empresa líder y referente en la prestación, desarrollo e innovación de bienes y servicios en las áreas de Electrónica y Telecomunicaciones.
+*** En caso de SI aceptar: ***
 
-** Servicios: **
+Te informamos que al generar la interacción por medio de este canal digital otorgas tu consentimiento para el tratamiento de tus datos personales, mismos que serán utilizados exclusivamente para la gestión de tus requerimientos y consultas en general.
 
-*** HotSpot Nodo: ***
-El HotSpot Nodo garantica la calidad y seguridad de las redes inalámbricas a través de la gestión centralizada de usuarios y puntos de acceso WIFI personalizados.
+Para más información de términos y condiciones: https://n9.cl/xuhml
 
-** Contactos: **
+Hola 👋 soy NodoBOT, tu asistente virtual de Nodo, para ayudarte con información personalizada, por favor dime tu nombre.
 
-*** Director de Proyectos I+D: ***
+*** Al recibir el nombre: ***
 
-- Nombre: Freddy Israel Mendoza Montaño
-- Correo: direccion.proyectos@electritelecom.com
-- Telefono: +593967161411
-
-*** Pasante ***
-
-- Nombre: Roddy Andrés Andrade Molina
-- Correo: roannamo@hotmail.com
-- Telefono: +593984111659
-
+Hola [NOMBRE] 👋, soy NodoBOT, tu asistente virtual de Nodo, para ayudarte con información personalizada, por favor dime tu correo.
 """
