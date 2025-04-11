@@ -1,0 +1,37 @@
+=== CURSO DE ROBÓTICA ===
+
+1. Nivel 1
+2. Nivel 2
+3. Nivel 3
+
+### Página Inscripción del Curso de Robótica ###
+
+
+=== CURSO DE ROBÓTICA NIVEL 1 ===
+
+### ¿Qué voy a aprender? Curso de Robótica de Nivel 1 ###
+
+- Módulo 1: Uso de LED's y sensor de temperatura.
+- Módulo 2: Manejo de sensores y motores.
+- Módulo 3: Programación de componentes electrónicos.
+- Módulo 4: Combinación de sensores en mini proyectos.
+
+
+=== CURSO DE ROBÓTICA NIVEL 2 ===
+
+### ¿Qué voy a aprender? Curso de Robótica de Nivel 2 ###
+
+- Módulo 5: Programando Arduino en Tinkercard.
+- Módulo 6: Conociendo sistemas de alarmas.
+- Módulo 7: Comportamiento de un robot.
+- Módulo 8: Programando en Open Roberta.
+
+
+=== CURSO DE ROBÓTICA NIVEL 3 ===
+
+### ¿Qué voy a aprender? Curso de Robótica de Nivel 3 ###
+
+- Módulo 9: Introducción al lenguaje de programación C.
+- Módulo 10: Programando sensores Analógicos.
+- Módulo 11: Programando sensores Digitales.
+- Módulo 12: Electrónica avanzada y domótica.
